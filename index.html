@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interview with Customs Officer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="phone">
+
+  <div class="tabbar">
+    <button class="tab active" data-page="listen">Listen<span class="dash">Map</span></button>
+    <button class="tab" data-page="transcript">Transcript<span class="dash">Read along</span></button>
+  </div>
+
+  <!-- LISTEN PAGE -->
+  <section class="page active" id="page-listen">
+    <img src="map.jpg" alt="Map" class="map-img">
+
+    <div class="title-strip">
+      <h1>Interview with Customs Officer</h1>
+    </div>
+
+    <div class="player-card">
+      <audio id="audio" src="interview.mp3" preload="metadata"></audio>
+
+      <div class="controls">
+        <button id="back" class="round" title="Back 10s">↺</button>
+        <button id="playPause" class="round big">▶</button>
+        <button id="fwd" class="round" title="Forward 10s">↻</button>
+      </div>
+
+      <div class="scrub-row">
+        <span id="curTime">0:00</span>
+        <input type="range" id="scrub" value="0" min="0" max="100" step="0.1">
+        <span id="durTime">0:00</span>
+      </div>
+
+      <div class="extra-row">
+        <button id="mute" class="round small">🔊</button>
+        <a href="interview.mp3" download class="link">⬇ Download</a>
+        <button id="share" class="link">📤 Share</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSCRIPT PAGE -->
+  <section class="page" id="page-transcript">
+    <div class="title-strip">
+      <h1>Interview with Customs Officer</h1>
+      <div class="sub">Transcript</div>
+    </div>
+
+    <div class="doc" id="transcript-body">
+
+      <div class="doc-meta">
+        <b>Interview with UK Customs Officer</b> — FT01, Current Global Issues<br>
+        Conducted by: <!-- your name --><br>
+        Conducted on: <!-- date --><br>
+        Conducted via: <!-- method -->
+      </div>
+
+      <!-- ============================================
+           Add one .doc-turn block per line of dialogue.
+           Duplicate this pair as many times as you need.
+           ============================================ -->
+
+      <div class="doc-turn">
+        <div class="doc-who interviewer">Interviewer</div>
+        <p>Evening, sir how are you doing?</p>
+      </div>
+      <div class="doc-turn">
+        <div class="doc-who interviewee">Interviewee</div>
+        <p>Good, thank you — and yourself?</p>
+      </div>
+
+      <!-- keep adding .doc-turn blocks below -->
+
+      <p class="doc-note">Replace this placeholder text with your full transcript. Copy a .doc-turn block for each new line.</p>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
