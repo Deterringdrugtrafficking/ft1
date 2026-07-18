@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;700&display=swap');
+
+:root{
+  --teal-deep:#0f4a4a;
+  --teal:#155c5c;
+  --kraft:#e7d9b8;
+  --ink:#1f2a24;
+  --stamp-red:#a5453a;
+  --cream:#f6f1e2;
+}
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  background:var(--teal-deep);
+  font-family:'Karla', sans-serif;
+  color:var(--ink);
+  min-height:100vh;
+}
+.phone{
+  max-width:480px;
+  margin:0 auto;
+  background:var(--cream);
+  min-height:100vh;
+}
+
+/* ---- TAB BAR ---- */
+.tabbar{
+  display:flex;
+  background:var(--teal-deep);
+  padding:10px 10px 0;
+  gap:6px;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.tab{
+  flex:1;
+  text-align:center;
+  padding:12px 8px 14px;
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:15px;
+  color:#bcd6d0;
+  background:transparent;
+  border:none;
+  border-radius:12px 12px 0 0;
+  cursor:pointer;
+  letter-spacing:.02em;
+}
+.tab.active{
+  background:var(--cream);
+  color:var(--teal-deep);
+}
+.tab .dash{
+  display:block;
+  font-size:10px;
+  font-family:'Karla',sans-serif;
+  font-weight:400;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  opacity:.6;
+  margin-top:2px;
+}
+
+.page{ display:none; }
+.page.active{ display:block; }
+
+.map-img{ width:100%; display:block; }
+
+.title-strip{
+  padding:18px 20px 14px;
+  border-bottom:1px dashed #b9a97c;
+}
+.title-strip h1{
+  font-family:'Fraunces', serif;
+  font-size:22px;
+  margin:0;
+}
+.title-strip .sub{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:#6b6350;
+  margin-top:2px;
+}
+
+/* ---- PLAYER ---- */
+.player-card{
+  margin:18px 20px;
+  background:#dfeae7;
+  border-radius:14px;
+  padding:20px;
+}
+.controls{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  margin-bottom:14px;
+}
+.round{
+  border:none;
+  background:#fff;
+  border-radius:50%;
+  width:44px; height:44px;
+  font-size:18px;
+  color:var(--teal);
+  cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+}
+.round.big{
+  width:64px; height:64px;
+  background:#4c9a7f;
+  color:#fff;
+  font-size:24px;
+}
+.round.small{ width:36px; height:36px; font-size:15px; }
+.scrub-row{
+  display:flex; align-items:center; gap:10px;
+  font-size:13px; color:var(--teal-deep);
+}
+.scrub-row input[type="range"]{ flex:1; accent-color:var(--teal); }
+.extra-row{
+  display:flex; align-items:center; gap:14px;
+  margin-top:14px;
+}
+.link{
+  background:none; border:none;
+  font-size:13px; color:var(--teal-deep);
+  text-decoration:none; cursor:pointer;
+}
+
+/* ---- DOCUMENT TRANSCRIPT ---- */
+.doc{ padding:18px 20px 40px; }
+.doc-meta{
+  background:var(--kraft);
+  border-radius:8px;
+  padding:12px 14px;
+  margin-bottom:16px;
+  font-size:12px;
+  line-height:1.7;
+}
+.doc-meta b{ color:var(--teal-deep); }
+.doc-turn{ margin-bottom:12px; }
+.doc-who{
+  font-family:'Fraunces', serif;
+  font-weight:700;
+  font-size:13px;
+  margin-bottom:3px;
+}
+.doc-who.interviewer{ color:var(--stamp-red); }
+.doc-who.interviewee{ color:var(--teal-deep); }
+.doc-turn p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+  padding-left:2px;
+}
+.doc-note{
+  font-size:11px;
+  color:#9c8f6d;
+  font-style:italic;
+}
